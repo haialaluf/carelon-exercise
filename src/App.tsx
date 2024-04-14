@@ -9,13 +9,13 @@ import { useGPTModel } from './chat';
 import { Discuss } from 'react-loader-spinner';
 
 const apiKey = prompt('Please enter your OpenAI API key');
+const textHandler = useGPTModel(apiKey);
 
 export default function App() {
   const [graph, setGraph] = useState({});
   const [text, setText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [value] = useDebounce(text, 1000);
-  const textHandler = useGPTModel(apiKey as string);
 
   const { nodes, edges } = graph as any;
 
