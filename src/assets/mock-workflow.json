@@ -1,0 +1,176 @@
+{
+    "nodes": [
+        {
+            "v": "11",
+            "value": {
+                "type": "sms",
+                "data": {
+                    "message": " You tried jumping? ",
+                    "widgets": []
+                },
+                "label": "11"
+            }
+        },
+        {
+            "v": "lpjklqknhrcn8tkb3gs",
+            "value": {
+                "type": "sms",
+                "data": {
+                    "message": " you jumped ",
+                    "widgets": []
+                },
+                "label": "lpjklqknhrcn8tkb3gs"
+            }
+        },
+        {
+            "v": "lpjkm4px5sq7u7s141h",
+            "value": {
+                "label": "+",
+                "isPlaceholder": true
+            }
+        },
+        {
+            "v": "lpjkkyh3rc27xapiumd",
+            "value": {
+                "type": "if-else",
+                "data": {
+                    "type": "message",
+                    "operator": "equals",
+                    "expectedValue": "yes"
+                },
+                "label": "lpjkkyh3rc27xapiumd"
+            }
+        },
+        {
+            "v": "lpjkkr8grri5ayv2gvl",
+            "value": {
+                "type": "trigger",
+                "data": {
+                    "type": "sms"
+                },
+                "label": "lpjkkr8grri5ayv2gvl"
+            }
+        },
+        {
+            "v": "lpjkmun9o554xw0mkb",
+            "value": {
+                "type": "jump",
+                "data": {
+                    "nodeId": "lpjklqknhrcn8tkb3gs"
+                },
+                "label": "lpjkmun9o554xw0mkb"
+            }
+        },
+        {
+            "v": "lpjklqkn3wb3ls8dqmk",
+            "value": {
+                "type": "sms",
+                "data": {
+                    "message": "want to jump?",
+                    "widgets": []
+                },
+                "label": "lpjklqkn3wb3ls8dqmk"
+            }
+        },
+        {
+            "v": "lpjkmf783650tn0z1ei",
+            "value": {
+                "type": "trigger",
+                "data": {
+                    "type": "sms"
+                },
+                "label": "lpjkmf783650tn0z1ei"
+            }
+        },
+        {
+            "v": "lpjkmkbyeoc3fo1sc9",
+            "value": {
+                "type": "if-else",
+                "data": {
+                    "type": "message",
+                    "operator": "equals",
+                    "expectedValue": "yes"
+                },
+                "label": "lpjkmkbyeoc3fo1sc9"
+            }
+        },
+        {
+            "v": "lpjkmun9w2a1uyf6tc",
+            "value": {
+                "type": "sms",
+                "data": {
+                    "message": "bye",
+                    "widgets": []
+                },
+                "label": "lpjkmun9w2a1uyf6tc"
+            }
+        },
+        {
+            "v": "lpjknaxulop4p5137xj",
+            "value": {
+                "label": "+",
+                "isPlaceholder": true
+            }
+        }
+    ],
+    "edges": [
+        {
+            "v": "11",
+            "w": "lpjkkr8grri5ayv2gvl",
+            "value": {}
+        },
+        {
+            "v": "lpjkkr8grri5ayv2gvl",
+            "w": "lpjkkyh3rc27xapiumd",
+            "value": {}
+        },
+        {
+            "v": "lpjkkyh3rc27xapiumd",
+            "w": "lpjklqknhrcn8tkb3gs",
+            "value": {
+                "conditionId": 1
+            }
+        },
+        {
+            "v": "lpjkkyh3rc27xapiumd",
+            "w": "lpjklqkn3wb3ls8dqmk",
+            "value": {
+                "conditionId": 0
+            }
+        },
+        {
+            "v": "lpjklqknhrcn8tkb3gs",
+            "w": "lpjkm4px5sq7u7s141h",
+            "value": {}
+        },
+        {
+            "v": "lpjklqkn3wb3ls8dqmk",
+            "w": "lpjkmf783650tn0z1ei",
+            "value": {}
+        },
+        {
+            "v": "lpjkmf783650tn0z1ei",
+            "w": "lpjkmkbyeoc3fo1sc9",
+            "value": {}
+        },
+        {
+            "v": "lpjkmkbyeoc3fo1sc9",
+            "w": "lpjkmun9o554xw0mkb",
+            "value": {
+                "conditionId": 1
+            }
+        },
+        {
+            "v": "lpjkmkbyeoc3fo1sc9",
+            "w": "lpjkmun9w2a1uyf6tc",
+            "value": {
+                "conditionId": 0
+            }
+        },
+        {
+            "v": "lpjkmun9w2a1uyf6tc",
+            "w": "lpjknaxulop4p5137xj",
+            "value": {}
+        }
+    ]
+}
